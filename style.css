@@ -38,11 +38,14 @@ css-doodle {
     width: 100%;
     background: var(--env-bg-color);
     box-shadow: 1px 10px var(--dark);
+    transform-origin: top;
+    transform: rotate(0deg);
     clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
 }
 
 .envelope-flap:hover {
-    clip-path: polygon(0 100%, 50% 0%, 100% 100%);
+    /* clip-path: polygon(0 100%, 50% 0%, 100% 100%); */
+    transform: rotate(180deg);
 }
 
 .envelope-body {
