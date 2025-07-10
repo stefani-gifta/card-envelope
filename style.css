@@ -1,0 +1,50 @@
+:root {
+    --env-bg-color: #fafafa;
+    --dark: #0a0c27;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background: var(--dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+css-doodle {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.envelope {
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #ffffff77;
+}
+
+.envelope-flap {
+    height: 0;
+    width: 0;
+    background: var(--env-bg-color);
+    box-shadow: 1px 10px var(--dark);
+    border-top: 10vw solid var(--dark);
+    border-right: 25vw solid transparent;
+    border-left: 25vw solid transparent;
+}
+
+.envelope-body {
+    height: 100%;
+    width: 100%;
+    background: var(--env-bg-color);
+}

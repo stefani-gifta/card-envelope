@@ -8,9 +8,22 @@
     <title>Envelope</title>
 </head>
 <body>
+
     <css-doodle>
-        
+        @grid: 10 / 100vmax / #0a0c27;
+        @shape: bud 5;
+        background: hsla(@i(+240), 70%, 68%, @r.8);
+        transform:
+            scale(@r(.5, 1))
+            rotate(@r(360deg))
+            translate(@m2.@r(±50%));
     </css-doodle>
+
+    <div class="envelope">
+        <div class="envelope-flap"></div>
+        <div class="envelope-body"></div>
+    </div>
+
 </body>
 <script src="script.js"></script>
 </html>
