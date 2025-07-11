@@ -1,7 +1,8 @@
 :root {
-    --env-bg-color: #fafafa;
-    --env-dark-color: #e7e1e1;
     --dark: #0a0c27;
+    --env-bg-color: #fafafa;
+    --env-dark-color: #e4e4e4;
+    --env-border-radius: 0 0 25px 25px;
 }
 
 * {
@@ -33,32 +34,43 @@ css-doodle {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    /* background: #ffffff77; */
+    background: var(--env-bg-color);
     position: relative;
+    box-shadow: 0 0 10px white, inset -10px -20px 500px var(--env-dark-color);
 }
 
 .envelope-flap {
+    z-index: 1;
     position: absolute;
-    top: 0;
-    height: 50%;
+    height: 100%;
     width: 100%;
-    background: var(--env-dark-color);
-    box-shadow: 10px 10px 10px var(--dark);
+    background:
+        radial-gradient(ellipse at top, white 0%, transparent 100%),
+        radial-gradient(ellipse at bottom, var(--env-dark-color) 0%, white 80%);
     transform-origin: top;
     transform: rotate(0deg);
-    clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 50% 70%, 100% 0%);
     transition: 0.5s transform;
 }
 
 .envelope-flap:hover {
     /* clip-path: polygon(0 100%, 50% 0%, 100% 100%); */
-    transform: rotateX(225deg);
+    transform: rotateX(180deg);
 }
 
 .envelope-body {
     height: 100%;
     width: 100%;
+    background:
+        radial-gradient(ellipse at top, white 0%, transparent 100%),
+        radial-gradient(ellipse at bottom, var(--env-dark-color) 0%, transparent 80%);
+    clip-path: polygon(0% 0%, 50% 50%, 50% 50%, 100% 0%, 100% 100%, 0 100%);
+}
+
+.envelope-bot-flap {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background: var(--env-bg-color);
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 0 10px white, inset -10px -10px 50px grey;
+    clip-path: polygon(0 100%, 50% 30%, 100% 100%);
 }
