@@ -1,5 +1,9 @@
-const env = document.getElementsByClassName('envelope-flap');
+const env = document.getElementsByClassName('envelope');
+const flap = document.getElementsByClassName('envelope-flap');
+const card = document.getElementsByClassName('card'); 
 
-env[0].addEventListener('click', function() {
-    env[0].classList.add('envelope-flap-hover');
+flap[0].addEventListener('click', function() {
+    env[0].classList.add('envelope-after');
+    flap[0].classList.add('envelope-flap-hover');
+    card[0].classList.add('card-peek');
 });
