@@ -1,5 +1,6 @@
 :root {
     --env-bg-color: #fafafa;
+    --env-dark-color: #e7e1e1;
     --dark: #0a0c27;
 }
 
@@ -32,7 +33,7 @@ css-doodle {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: #ffffff77;
+    /* background: #ffffff77; */
     position: relative;
 }
 
@@ -41,21 +42,23 @@ css-doodle {
     top: 0;
     height: 50%;
     width: 100%;
-    background: var(--env-bg-color);
+    background: var(--env-dark-color);
     box-shadow: 10px 10px 10px var(--dark);
-    border: 1px solid var(--dark);
     transform-origin: top;
     transform: rotate(0deg);
     clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    transition: 0.5s transform;
 }
 
 .envelope-flap:hover {
     /* clip-path: polygon(0 100%, 50% 0%, 100% 100%); */
-    transform: rotate(180deg);
+    transform: rotateX(225deg);
 }
 
 .envelope-body {
     height: 100%;
     width: 100%;
     background: var(--env-bg-color);
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px white, inset -10px -10px 50px grey;
 }
