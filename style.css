@@ -83,6 +83,12 @@ css-doodle {
     width: 45vw;
     background: purple;
     transition: 0.5s transform;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
 }
 
 .card-peek {
