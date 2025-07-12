@@ -7,3 +7,8 @@ flap[0].addEventListener('click', function() {
     flap[0].classList.add('envelope-flap-hover');
     card[0].classList.add('card-peek');
 });
+
+card[0].addEventListener('click', function() {
+    card[0].classList.remove('card-peek');
+    card[0].classList.add('card-show');
+});
