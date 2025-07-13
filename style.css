@@ -145,3 +145,14 @@ css-doodle {
     align-items: center;
     text-align: center;
 }
+
+#instruction {
+    font: 15px sans-serif;
+    font-style: italic;
+    width: 100vw;
+    position: absolute;
+    bottom: 15px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
