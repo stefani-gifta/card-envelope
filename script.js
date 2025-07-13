@@ -5,14 +5,23 @@ const card = document.getElementsByClassName('card');
 
 // instruction.innerHTML = "Click on envelope to open!";
 
+function isCardPeeked() {
+    return card[0].classList.contains('card-peek');
+}
+function isCardShown() {
+    return card[0].classList.contains('card-show');
+}
+
 env[0].addEventListener('click', function() {
-    if(flap[0].classList.contains('envelope-flap-hover') && !card[0].classList.contains('card-peek') && !card[0].classList.contains('card-show')) {
+    const flapOpened = flap[0].classList.contains('envelope-flap-hover');
+    const cardNotVisible = !isCardPeeked() && !isCardShown();
+
+    if(flapOpened && cardNotVisible) {
         // close envelope
         flap[0].classList.remove('envelope-flap-hover');
-        card[0].classList.remove('card-show');
-        card[0].classList.remove('card-hide');
+        card[0].classList.remove('card-show', 'card-hide');
         // instruction.innerHTML = "Click on envelope to open!";
-    } else if(!card[0].classList.contains('card-peek') && !card[0].classList.contains('card-show')) {
+    } else if(cardNotVisible) {
         // open envelope + peek card
         flap[0].classList.add('envelope-flap-hover');
         card[0].classList.add('card-peek');
@@ -21,7 +30,7 @@ env[0].addEventListener('click', function() {
 });
 
 card[0].addEventListener('click', function() {
-    if(card[0].classList.contains('card-peek')) {
+    if(isCardPeeked()) {
         // open card
         card[0].classList.remove('card-peek');
         card[0].classList.add('card-show');
@@ -29,7 +38,9 @@ card[0].addEventListener('click', function() {
 });
 
 document.addEventListener('click', function(e) {
-    if(!card[0].contains(e.target) && card[0].classList.contains('card-show')) {
+    const clickOutsideCard = !card[0].contains(e.target);
+
+    if(clickOutsideCard && isCardShown()) {
         // hide card
         card[0].classList.remove('card-show');
         card[0].classList.add('card-hide');
