@@ -8,14 +8,12 @@ const card = document.getElementsByClassName('card');
 env[0].addEventListener('click', function() {
     if(flap[0].classList.contains('envelope-flap-hover') && !card[0].classList.contains('card-peek') && !card[0].classList.contains('card-show')) {
         // close envelope
-        env[0].classList.remove('envelope-after');
         flap[0].classList.remove('envelope-flap-hover');
         card[0].classList.remove('card-show');
         card[0].classList.remove('card-hide');
         // instruction.innerHTML = "Click on envelope to open!";
-    } else if(!card[0].classList.contains('card-peek')) {
+    } else if(!card[0].classList.contains('card-peek') && !card[0].classList.contains('card-show')) {
         // open envelope + peek card
-        env[0].classList.add('envelope-after');
         flap[0].classList.add('envelope-flap-hover');
         card[0].classList.add('card-peek');
         // instruction.innerHTML = "Click on card to open and close!";
