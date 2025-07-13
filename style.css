@@ -85,10 +85,7 @@ css-doodle {
     width: 45vw;
     background: linear-gradient(var(--card-color), white);
     border-radius: 25px;
-
     display: flex;
-    flex-direction: column;
-    gap: 5px;
     justify-content: center;
     align-items: center;
 }
@@ -118,4 +115,24 @@ css-doodle {
     100% {
         transform: scale(200%);
     }
+}
+
+.card-close-button {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(99, 11, 11);
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2% 3%;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
