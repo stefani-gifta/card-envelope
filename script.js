@@ -1,56 +1,56 @@
-const env = document.getElementsByClassName('envelope');
-const flap = document.getElementsByClassName('envelope-flap');
-const card = document.getElementsByClassName('card');
+const env = document.querySelector('.envelope');
+const flap = document.querySelector('.envelope-flap');
+const card = document.querySelector('.card');
 const instruction = document.getElementById('instruction');
-const arrow = document.getElementsByClassName('arrow');
+const arrow = document.querySelector('.arrow');
 
 function isCardPeeked() {
-    return card[0].classList.contains('card-peek');
+    return card.classList.contains('card-peek');
 }
 function isCardShown() {
-    return card[0].classList.contains('card-show');
+    return card.classList.contains('card-show');
 }
 
-env[0].addEventListener('click', function() {
-    const flapOpened = flap[0].classList.contains('envelope-flap-hover');
+env.addEventListener('click', function() {
+    const flapOpened = flap.classList.contains('envelope-flap-hover');
     const cardNotVisible = !isCardPeeked() && !isCardShown();
 
     if(flapOpened && cardNotVisible) {
         // close envelope
-        flap[0].classList.remove('envelope-flap-hover');
-        card[0].classList.remove('card-show', 'card-hide');
+        flap.classList.remove('envelope-flap-hover');
+        card.classList.remove('card-show', 'card-hide');
     } else if(cardNotVisible) {
         // open envelope + peek card
-        flap[0].classList.add('envelope-flap-hover');
-        card[0].classList.add('card-peek');
-        card[0].draggable = true;
-        env[0].style.cursor = "default";
-        arrow[0].style.display = "block";
+        flap.classList.add('envelope-flap-hover');
+        card.classList.add('card-peek');
+        card.draggable = true;
+        env.style.cursor = "default";
+        arrow.style.display = "block";
     };
 });
 
-card[0].addEventListener('dragstart', function() {
+card.addEventListener('dragstart', function() {
     if(isCardPeeked()) {
         // open card
-        card[0].classList.remove('card-peek');
-        card[0].classList.add('card-show');
+        card.classList.remove('card-peek');
+        card.classList.add('card-show');
         instruction.style.opacity = "1";
-        card[0].draggable = false;
-        arrow[0].style.display = "none";
-        env[0].style.cursor = "pointer";
+        card.draggable = false;
+        arrow.style.display = "none";
+        env.style.cursor = "pointer";
         document.body.style.cursor = "pointer";
     }
 });
 
 document.addEventListener('click', function(e) {
-    const clickOutsideCard = !card[0].contains(e.target);
+    const clickOutsideCard = !card.contains(e.target);
 
     if(clickOutsideCard && isCardShown()) {
         // hide card
-        card[0].classList.remove('card-show');
-        card[0].classList.add('card-hide');
+        card.classList.remove('card-show');
+        card.classList.add('card-hide');
         instruction.style.opacity = "0";
-        env[0].style.cursor = "pointer";
+        env.style.cursor = "pointer";
         document.body.style.cursor = "default";
     }
 });
