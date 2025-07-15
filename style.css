@@ -97,44 +97,8 @@ css-doodle {
 .card-peek {
     z-index: 1;
     transition: 0.5s transform cubic-bezier(0.5, 2, 0.3, 1);
-    cursor: pointer;
     transform: translateY(-100px);
-}
-
-.arrow {
-    z-index: 2;
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    animation: infinite arrow-pull-card 1.2s ease-in-out;
-    width: 70px;
-    height: 70px;
-    background: linear-gradient(0deg, #ffffff00 0%, var(--dark) 100%);
-    clip-path: polygon(
-        10% 50%,    /* outer ear left */
-        50% 0,      /* point */
-        90% 50%,    /* outer ear right */
-        65% 40%,    /* inner ear right */
-        65% 100%,   /* bottom right */
-        35% 100%,   /* bottom left */
-        35% 40%);   /* inner ear left */
-    display: none;
-}
-
-@keyframes arrow-pull-card {
-    0% {
-        transform: translate(-50%, 0);
-    }
-
-    50% {
-        height: 80px;
-        transform: translate(-50%, -20px);
-    }
-
-    100% {
-        transform: translate(-50%, 0);
-    }
+    cursor: pointer;
 }
 
 .card-show {
@@ -142,6 +106,7 @@ css-doodle {
     background: var(--card-color);
     transform: scale(180%);
     animation: pull-out-card 1s linear;
+    cursor: default;
 }
 
 @keyframes pull-out-card {
@@ -204,4 +169,40 @@ css-doodle {
     text-shadow: var(--card-color) 1px 0 10px;
     transition: 0.5s;
     opacity: 0;
+}
+
+.arrow {
+    z-index: 2;
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: infinite arrow-pull-card 1.2s ease-in-out;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(0deg, #ffffff00 0%, var(--env-dark-color) 100%);
+    clip-path: polygon(
+        10% 50%,    /* outer ear left */
+        50% 0,      /* point */
+        90% 50%,    /* outer ear right */
+        65% 40%,    /* inner ear right */
+        65% 100%,   /* bottom right */
+        35% 100%,   /* bottom left */
+        35% 40%);   /* inner ear left */
+    display: none;
+}
+
+@keyframes arrow-pull-card {
+    0% {
+        transform: translate(-50%, 0);
+    }
+
+    50% {
+        height: 110px;
+        transform: translate(-50%, -20px);
+    }
+
+    100% {
+        transform: translate(-50%, 0);
+    }
 }

@@ -37,6 +37,8 @@ card[0].addEventListener('dragstart', function() {
         instruction.style.opacity = "1";
         card[0].draggable = false;
         arrow[0].style.display = "none";
+        env[0].style.cursor = "pointer";
+        document.body.style.cursor = "pointer";
     }
 });
 
@@ -49,5 +51,6 @@ document.addEventListener('click', function(e) {
         card[0].classList.add('card-hide');
         instruction.style.opacity = "0";
         env[0].style.cursor = "pointer";
+        document.body.style.cursor = "default";
     }
 });
