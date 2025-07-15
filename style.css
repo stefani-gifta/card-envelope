@@ -47,7 +47,8 @@ css-doodle {
 .envelope-flap {
     z-index: 4;
     position: absolute;
-    height: 100%;
+    top: 0;
+    height: 70%;
     width: 100%;
     background: none;
         /* radial-gradient(ellipse at top, white 0%, transparent 100%),
@@ -75,10 +76,11 @@ css-doodle {
 .envelope-bot-flap {
     z-index: 3;
     position: absolute;
-    height: 100%;
+    bottom: 0;
+    height: 70%;
     width: 100%;
-    background: var(--env-bg-color);
-    clip-path: polygon(0 100%, 50% 30%, 100% 100%);
+    background: none;
+    /* clip-path: polygon(0 100%, 50% 30%, 100% 100%); */
 }
 
 .card {
