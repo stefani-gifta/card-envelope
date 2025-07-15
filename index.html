@@ -20,7 +20,17 @@
     </css-doodle>
 
     <div class="envelope">
-        <div class="envelope-flap"></div>
+        <div class="envelope-flap">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="100%" height="100%" preserveAspectRatio="none" fill="none">
+                <defs>
+                    <radialGradient id="radialGradientFlap" r="1" cx="0.5" cy="0.5">
+                        <stop offset="0.3" stop-color="#fafafa" />
+                        <stop offset="1" stop-color="#e4e4e4" />
+                    </radialGradient>
+                </defs>
+                <path d="M 0 0 L 800 0 C 800 50 794 51 750 100 C 504 313 469 352 400 350 C 325 351 280 303 50 100 C 0 50 -1 46 0 0 Z" fill="url(#radialGradientFlap)"/>
+            </svg>
+        </div>
         <div class="envelope-body"></div>
         <div class="envelope-bot-flap"></div>
     </div>

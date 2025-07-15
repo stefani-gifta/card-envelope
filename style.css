@@ -33,7 +33,7 @@ css-doodle {
 
 .envelope {
     height: 50vh;
-    width: 50vw;
+    width: 40vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,11 +49,11 @@ css-doodle {
     position: absolute;
     height: 100%;
     width: 100%;
-    background:
-        radial-gradient(ellipse at top, white 0%, transparent 100%),
-        radial-gradient(ellipse at bottom, var(--env-dark-color) 0%, white 80%);
+    background: none;
+        /* radial-gradient(ellipse at top, white 0%, transparent 100%),
+        radial-gradient(ellipse at bottom, var(--env-dark-color) 0%, white 80%); */
     transform-origin: top;
-    clip-path: polygon(0% 0%, 50% 70%, 100% 0%);
+    /* clip-path: polygon(0% 0%, 50% 70%, 100% 0%); */
     transition: 0.5s transform;
     transform: rotate(0deg);
 }
@@ -68,7 +68,7 @@ css-doodle {
     height: 100%;
     width: 100%;
     background:
-        radial-gradient(ellipse at top, var(--env-dark-color) 20%, var(--env-bg-color) 50%);
+        radial-gradient(ellipse at top, var(--env-dark-color) 20%, var(--env-bg-color) 60%);
     clip-path: polygon(0% 0%, 50% 50%, 50% 50%, 100% 0%, 100% 100%, 0 100%);
 }
 
@@ -85,7 +85,7 @@ css-doodle {
     z-index: 1;
     position: absolute;
     height: 45vh;
-    width: 45vw;
+    width: 35vw;
     background: linear-gradient(var(--card-color), white);
     border-radius: 25px;
     display: flex;
