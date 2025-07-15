@@ -1,4 +1,8 @@
-Utilizing CSS ```clip-path``` to create envelope, and ```z-index``` with ```transform``` to create animation
+Utilizing SVG ```path``` and CSS ```clip-path``` to create objects, with ```z-index``` and ```transform``` for the keyframes properties
+
+## Live preview
+
+[See result](https://stefani-gifta.github.io/card-envelope/)
 
 ## Acknowledgments
 
