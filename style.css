@@ -29,6 +29,13 @@ css-doodle {
     top: 0;
     left: 0;
     transform: scale(150%) rotate(-45deg);
+    overflow: hidden;
+}
+
+@media screen and (max-width: 600px) {
+  css-doodle {
+    transform: scale(300%) rotate(-45deg);
+  }
 }
 
 .envelope {
