@@ -29,7 +29,7 @@ env.addEventListener('click', function() {
     };
 });
 
-card.addEventListener('dragstart', function() {
+card.addEventListener('dragend', function() {
     if(isCardPeeked()) {
         // open card
         card.classList.remove('card-peek');
