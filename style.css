@@ -4,6 +4,7 @@
     --env-dark-color: #e4e4e4;
     --env-border-radius: 0 0 25px 25px;
     --card-color: #ddccb2;
+    --card-color-shadow: #9e9382;
 }
 
 * {
@@ -189,7 +190,7 @@ css-doodle {
     bottom: 5%;
     text-align: center;
     color: var(--card-color);
-    text-shadow: var(--card-color) 1px 0 10px;
+    text-shadow: var(--card-color-shadow) 1px 0 10px;
     transition: 0.5s;
     opacity: 0;
 }
