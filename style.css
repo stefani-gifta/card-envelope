@@ -169,11 +169,9 @@ css-doodle {
 
 @media screen and (max-width: 1023px) {
   .envelope {
-    height: 35vh;
     width: 75vw;
   }
   .card {
-    height: 30vh;
     width: 70vw;
   }
 }
