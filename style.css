@@ -32,7 +32,7 @@ css-doodle {
     overflow: hidden;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 768px) {
   css-doodle {
     transform: scale(300%) rotate(-45deg);
   }
@@ -165,6 +165,17 @@ css-doodle {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+@media screen and (max-width: 1023px) {
+  .envelope {
+    height: 35vh;
+    width: 75vw;
+  }
+  .card {
+    height: 30vh;
+    width: 70vw;
+  }
 }
 
 #instruction {
