@@ -3,7 +3,7 @@
     --env-bg-color: #fafafa;
     --env-dark-color: #e4e4e4;
     --env-border-radius: 0 0 25px 25px;
-    --card-color: #ddccb2;
+    --card-color: #a38764;
     --card-color-shadow: #6e685e;
 
     --envelope-width: 45vw;
@@ -33,7 +33,8 @@ body {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    font-family: Brush Script MT, cursive;
+    font-size: 120%;
 }
 
 css-doodle {
@@ -183,7 +184,8 @@ css-doodle {
 
 #instruction {
     z-index: 6;
-    font-size: 1.1em;
+    font-size: 0.8em;
+    font-family: monospace;
     width: 100vw;
     position: absolute;
     bottom: 5%;
